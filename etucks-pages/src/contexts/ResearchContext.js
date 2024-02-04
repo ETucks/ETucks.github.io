@@ -76,7 +76,7 @@ export const ResearchProvider = ({ children }) => {
               `},
               { type: 'image', src: '/research_images/r_1_images/r_1_4.png' },
               { type: 'markdown', 
-              value: `If we look at regularization, we'll find that 
+              value: `Now, if we look at regularization, we'll find that 
               `},
               { type: 'markdown', value: 'References: ' }
             //   { type: 'animation', animationId: 'animation1' },
