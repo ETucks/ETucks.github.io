@@ -1,0 +1,179 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-header nav a {
+  color: white;
+  text-decoration: none; /* Optional: removes the underline from links */
+  margin: 0 10px;       /* Optional: adds some spacing between links */
+}
+
+.App-header nav a:hover {
+  text-decoration: underline; /* Optional: adds underline on hover for better UX */
+}
+
+.About, .Portfolio-highlights {
+  padding: 20px;
+}
+
+.Highlight-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/*---------------------Art Component---------------------*/
+.art-preview {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+}
+
+.art-preview img {
+  max-width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+.art-full-view img {
+  max-width: 300px; /* Adjust as needed */
+  margin: 10px;
+}
+
+.set-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.set-preview {
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  overflow: hidden; /* Ensure the title overlay fits within the image bounds */
+}
+
+.set-preview img {
+  max-width: 150px; /* Adjust to a suitable smaller size */
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+  display: block; /* Removes any extra space below the image */
+}
+
+.set-title-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0; /* Adjust padding as needed */
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-gallery img {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.enlarged-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above everything else */
+}
+
+.enlarged-image-modal img {
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/*---------------------Research Component---------------------*/
+.research-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.research-card {
+  margin: 10px; /* Adjust the margin as needed for spacing */
+  width: 240px; /* Adjust width as needed */
+}
+
+.research-preview-container .ant-card {
+  margin: 16px; /* Adjust the space as needed */
+}
+
+.research-preview {
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  overflow: hidden; /* Ensures the title overlay fits within the image bounds */
+}
+
+.research-preview img {
+  max-width: 150px; /* Adjust to a suitable smaller size */
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+  display: block; /* Removes any extra space below the image */
+}
+
+.research-title-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0; /* Adjust padding as needed */
+}
+
+.markdown-container {
+  text-align: left;
+}
