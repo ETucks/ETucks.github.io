@@ -3,9 +3,9 @@ import React, { useContext } from 'react';
 import { ResearchContext } from '../../../contexts/ResearchContext';
 import { Link } from 'react-router-dom';
 
-const subProjects = [
-    // ...sub-project data with unique IDs...
-];
+// const subProjects = [
+//     // ...sub-project data with unique IDs...
+// ];
 
 function RP1() {
     const { researchProjects } = useContext(ResearchContext);
