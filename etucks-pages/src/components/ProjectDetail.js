@@ -76,8 +76,8 @@ function ProjectDetail() {
         <div key={index}>{renderContentElement(element)}</div>
       ))}
       {showCode && (
-        <div className="code-container">
-          <pre><code>{codeContent}</code></pre>
+        <div className="code-container" style={{ backgroundColor: '#282c34', color: '#abb2bf', padding: '20px', borderRadius: '5px', overflowX: 'auto' }}>
+          <pre style={{ margin: 0 }}><code className="language-python">{codeContent}</code></pre> {/* Add language class */}
         </div>
       )}
     </div>
