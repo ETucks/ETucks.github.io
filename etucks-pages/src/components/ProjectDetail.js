@@ -2,12 +2,15 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ResearchContext } from '../contexts/ResearchContext';
 import ReactMarkdown from 'react-markdown';
+import Prism from 'prismjs';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import "../styles/prism-overrides.css";
 import '../App.css';
-import 'prismjs/themes/prism-tomorrow.css';
-import Prism from 'prismjs';
+
 
   
 function ProjectDetail() {
