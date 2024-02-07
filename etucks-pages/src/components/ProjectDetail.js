@@ -16,6 +16,10 @@ function ProjectDetail() {
     const [codeContent, setCodeContent] = useState('');
     const [showCode, setShowCode] = useState(false);
   
+    useEffect(() => {
+      Prism.highlightAll();
+    }, [codeContent, showCode]);
+
     // Find the project and sub-project based on the URL parameters
     const project = researchProjects.find(p => p.id === projectId);
     const subProject = project?.subProjects?.find(sp => sp.id === subProjectId);
@@ -23,10 +27,6 @@ function ProjectDetail() {
     if (!subProject) {
       return <div>Sub-project not found.</div>;
     }
-
-    useEffect(() => {
-      Prism.highlightAll();
-    }, [codeContent, showCode]);
 
     const displayCode = (codePath) => {
       fetch(codePath)
