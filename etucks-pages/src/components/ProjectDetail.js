@@ -69,6 +69,11 @@ function ProjectDetail() {
       {subProject.content.map((element, index) => (
         <div key={index}>{renderContentElement(element)}</div>
       ))}
+      {showCode && (
+        <div className="code-container">
+          <pre><code>{codeContent}</code></pre>
+        </div>
+      )}
     </div>
   );
 }
