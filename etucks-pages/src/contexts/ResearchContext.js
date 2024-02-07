@@ -79,7 +79,7 @@ export const ResearchProvider = ({ children }) => {
               value: `Now, if we compare the no regularization results with L1 (Lasso) L2 (Ridge) regularizations we'll find the following values 
                       (having averaged over data 100 combinations)
               `},
-              { type: 'image', src: '/research_images/r_1_images/r_1_4.png' },
+              { type: 'image', src: '/research_images/r_1_images/r_1_5.png' },
               { type: 'markdown', value: 'References: ' }
             //   { type: 'animation', animationId: 'animation1' },
               // More content elements...
