@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ResearchContext } from '../contexts/ResearchContext';
 import ReactMarkdown from 'react-markdown';
