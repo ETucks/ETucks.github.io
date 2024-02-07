@@ -28,16 +28,25 @@ function ProjectDetail() {
       return <div>Sub-project not found.</div>;
     }
 
-    const displayCode = (codePath) => {
-      fetch(codePath)
-        .then(response => response.text())
-        .then(code => {
-          setCodeContent(code);
-          setShowCode(true); // Show the code box after fetching the code
-        })
-        .catch(error => {
-          console.error('Error fetching code:', error);
-        });
+    const toggleCodeVisibility = (codePath) => {
+      if (showCode) {
+        setShowCode(false); // If code is currently shown, simply hide it
+      } else {
+        // Only fetch code if it hasn't been fetched yet
+        if (!codeContent) {
+          fetch(codePath)
+            .then(response => response.text())
+            .then(code => {
+              setCodeContent(code); // Save the fetched code
+              setShowCode(true); // Show the code box
+            })
+            .catch(error => {
+              console.error('Error fetching code:', error);
+            });
+        } else {
+          setShowCode(true); // If code has already been fetched, just show it
+        }
+      }
     };
   
     const renderContentElement = (element) => {
@@ -60,7 +69,7 @@ function ProjectDetail() {
           );
         case 'code':
           return (
-            <button onClick={() => displayCode(element.src)}>Show Code</button>
+            <button onClick={() => toggleCodeVisibility(element.src)}>Toggle Code</button>
           );
       //   case 'animation':
       //     return <MyCustomAnimation id={element.animationId} />;
@@ -76,8 +85,8 @@ function ProjectDetail() {
         <div key={index}>{renderContentElement(element)}</div>
       ))}
       {showCode && (
-        <div className="code-container" style={{ backgroundColor: '#282c34', color: '#abb2bf', padding: '20px', borderRadius: '5px', overflowX: 'auto' }}>
-          <pre style={{ margin: 0 }}><code className="language-python">{codeContent}</code></pre> {/* Add language class */}
+        <div className="code-container" style={{ /* Your styling here */ }}>
+          <pre style={{ margin: 0 }}><code className="language-python">{codeContent}</code></pre>
         </div>
       )}
     </div>
