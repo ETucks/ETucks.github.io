@@ -84,13 +84,11 @@ export const ResearchProvider = ({ children }) => {
               { type: 'markdown', 
                 value: `Let's compare the mean accuracy and wall time for datasets of increasing size using various classifiers.
               `},
-              { type: 'image', src: '/research_images/r_1_images/r_1_6.png' },
-              { type: 'image', src: '/research_images/r_1_images/r_1_7.png' },
+              { type: 'image', src: '/research_images/r_1_images/r_1_8.png' },
               { type: 'markdown', 
               value: `Now, we can look at how the number of features (for 2 classes) and number of classes (for 20 features) changes the
                       accuracy and wall time for these different classifiers.
               `},
-              { type: 'image', src: '/research_images/r_1_images/r_1_8.png' },
               { type: 'image', src: '/research_images/r_1_images/r_1_9.png' },
               { type: 'image', src: '/research_images/r_1_images/r_1_10.png' },
               { type: 'markdown', value: 'References: ' }
