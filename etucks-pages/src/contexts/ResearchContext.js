@@ -96,6 +96,7 @@ export const ResearchProvider = ({ children }) => {
                 value: `We can now look at ROC curves for logistic regression and AdaBoost with the Jannis dataset from OpenML
               `},
               { type: 'image', src: '/research_images/r_1_images/r_1_9.png' },
+              { type: 'code', src: '/research_images/r_1_images/r_1_9.py' },
               { type: 'markdown', value: 'References: ' }
             //   { type: 'animation', animationId: 'animation1' },
               // More content elements...
