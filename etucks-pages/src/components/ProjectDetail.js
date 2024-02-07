@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ResearchContext } from '../contexts/ResearchContext';
 import ReactMarkdown from 'react-markdown';
@@ -6,6 +6,8 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import '../App.css';
+import 'prismjs/themes/prism-okaidia.css';
+import Prism from 'prismjs';
 
   
 function ProjectDetail() {
@@ -21,6 +23,10 @@ function ProjectDetail() {
     if (!subProject) {
       return <div>Sub-project not found.</div>;
     }
+
+    useEffect(() => {
+      Prism.highlightAll();
+    }, [codeContent, showCode]);
 
     const displayCode = (codePath) => {
       fetch(codePath)
