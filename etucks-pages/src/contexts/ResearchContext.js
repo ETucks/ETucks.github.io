@@ -80,6 +80,12 @@ export const ResearchProvider = ({ children }) => {
                       (having averaged over data 100 combinations)
               `},
               { type: 'image', src: '/research_images/r_1_images/r_1_5.png' },
+              { type: 'markdown', value: '**Classifier Performance Example**' },
+              { type: 'markdown', 
+                value: `Let's compare the mean accuracy and wall time for datasets of increasing size using various classifiers.
+              `},
+              { type: 'image', src: '/research_images/r_1_images/r_1_6.png' },
+              { type: 'image', src: '/research_images/r_1_images/r_1_7.png' },
               { type: 'markdown', value: 'References: ' }
             //   { type: 'animation', animationId: 'animation1' },
               // More content elements...
