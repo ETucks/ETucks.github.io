@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './App.css';
 import { Route, Routes, Link } from 'react-router-dom';
 import { Card } from 'antd';
@@ -10,10 +10,12 @@ import RP2 from './components/Research/Projects/RP2';
 import RP3 from './components/Research/Projects/RP3';
 import Art from './components/Art/Art';
 import ProjectDetail from './components/ProjectDetail';
-import { ResearchProvider } from './contexts/ResearchContext';
+import { ResearchProvider, ResearchContext } from './contexts/ResearchContext';
 
 function App() {
   const { researchProjects } = useContext(ResearchContext);
+
+  let navigate = useNavigate();
 
   const handleProjectClick = (projectId) => {
     navigate(`/research/${projectId}`);
