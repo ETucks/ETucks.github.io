@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import './App.css';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import { Card } from 'antd';
 import { Row, Col } from 'antd'
 import Home from './components/Home/Home'; // Import the Home component
