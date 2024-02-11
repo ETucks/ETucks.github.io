@@ -45,6 +45,20 @@ function App() {
           {/* <p>Footer content here.</p> */}
         </footer>
       </div>
+
+      <div className="research-preview-container">
+        {researchProjects.map((project) => (
+          <Card
+            key={project.id}
+            className="research-card" // Add this line
+            hoverable
+            cover={<img alt={project.title} src={project.image} />}
+            onClick={() => handleProjectClick(project.id)}
+          >
+            <Card.Meta title={project.title} description={project.description} />
+          </Card>
+        ))}
+      </div>
     </ResearchProvider>
   );
 }
