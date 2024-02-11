@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route, Routes, Link } from 'react-router-dom';
+import { Card } from 'antd';
 import { Row, Col } from 'antd'
 import Home from './components/Home/Home'; // Import the Home component
 import Research from './components/Research/Research';
@@ -12,6 +13,12 @@ import ProjectDetail from './components/ProjectDetail';
 import { ResearchProvider } from './contexts/ResearchContext';
 
 function App() {
+  const { researchProjects } = useContext(ResearchContext);
+
+  const handleProjectClick = (projectId) => {
+    navigate(`/research/${projectId}`);
+  };
+
   return (
     <ResearchProvider>
       <div className="App">
